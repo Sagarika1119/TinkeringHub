@@ -17,7 +17,7 @@ const containerStyle = {
     marginTop: '2rem',
     marginLeft: 'auto',
     marginRight: '3rem', // Increase marginRight to shift the card to the right
-    backgroundColor: '#9ae6b4',
+    backgroundColor: '#c6f6d5',
     // background-color: #9ae6b4;
     borderRadius: '60px', // Adjusted for a more standard card look
     padding: '1rem',

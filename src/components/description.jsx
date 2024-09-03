@@ -1,10 +1,10 @@
 import React from 'react';
-import Image from 'next/image'; // Adjust if using Next.js image optimization
+import Image from 'next/image';
 
 const heroStyle = {
   textAlign: 'center',
   margin: '2rem auto',
-  maxWidth: '1200px', // Optional: set max-width for better control
+  maxWidth: '1200px',
 };
 
 const headingStyle = {
@@ -14,11 +14,11 @@ const headingStyle = {
 };
 
 const paragraphStyle = {
-  fontSize: '1rem', // Reduced font size
-  lineHeight: '1.4', // Adjust line height if needed
-  marginBottom: '1.5rem', // Space below the paragraph
-  maxWidth: '800px', // Reduce the width of the text
-  margin: '0 auto', // Space below the paragraph
+  fontSize: '1rem',
+  lineHeight: '1.4',
+  marginBottom: '1.5rem',
+  maxWidth: '800px',
+  margin: '0 auto',
 };
 
 const sectionStyle = {
@@ -26,70 +26,38 @@ const sectionStyle = {
   alignItems: 'center',
   justifyContent: 'space-between',
   marginTop: '2rem',
-  position: 'relative',
   gap: '2rem',
-  paddingBottom: '2rem', // Ensure consistent spacing between text and image
+  paddingBottom: '2rem',
 };
 
 const textSectionStyle = {
   flex: '1',
-  // textAlign: 'left',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
+  marginLeft: '7rem',
+  color: '#333333', // Add margin-left to the text
+};
+
+const spanStyle = {
+  display: 'block',
+  width: '100%', // Ensure consistent width for alignment
+  textAlign: 'left', // Align text to the left
+  marginBottom: '0.5rem', // Adjust spacing between spans
+  fontSize :'1.3rem',
+  color: '#333333',
 };
 
 const imageSectionStyle = {
   flex: '1',
   display: 'flex',
-  justifyContent: 'center', // Center the image within its container
+  justifyContent: 'center',
 };
 
 const subheadingStyle = {
   fontSize: '2rem',
-  fontWeight: 'bold', // Make the subheading bold
+  fontWeight: 'bold',
 };
-
-// Styles for the navigation links
-// const navLinksContainerStyle = {
-//   display: 'flex',
-//   justifyContent: 'center',
-//   marginTop: '3rem', // Adjust space above links
-// };
-
-// const navLinkStyle = {
-//   margin: '0 1rem', // Space between links
-//   fontSize: '1rem',
-//   color: 'darkgrey', // Default color
-//   cursor: 'pointer',
-//   transition: 'color 0.3s', // Smooth color transition on hover
-// };
-
-// const activeLinkStyle = {
-//   color: 'black', // Active link color
-// };
-
-// // Styles for the additional content section
-// const additionalContentStyle = {
-//   display: 'flex',
-//   alignItems: 'flex-start', // Align text to the top of the section
-//   justifyContent: 'space-between',
-//   marginTop: '3rem', // Adjust space above the section
-// };
-
-// const additionalTextStyle = {
-//   flex: '1',
-//   marginLeft: '2rem', // Add left margin here
-// };
-
-// const boldTextStyle = {
-//   fontSize: '2rem',
-//   fontWeight: 'bold',
-//   marginBottom: '0.5rem',
-// };
-
-// const imageWrapperStyle = {
-//   flex: '1',
-//   display: 'flex',
-//   justifyContent: 'center',
-// };
 
 const HeroSection = () => {
   return (
@@ -104,14 +72,17 @@ const HeroSection = () => {
         <div style={sectionStyle}>
           <div style={textSectionStyle}>
             <h2 style={subheadingStyle}>Sensitizing</h2>
-            <h3>Promotion of Concept to Every Stakeholder</h3>
+            <h3 style={{ margin: 0 }}>
+              <span style={spanStyle}>Promotion of Concept to Every</span>
+              <span style={spanStyle}>Stakeholder</span>
+            </h3>
           </div>
           <div style={imageSectionStyle}>
             <Image
-              src="/images/img1.jpg" // Update with actual path to vector image
+              src="/images/img1.png"
               alt="Vector Image"
-              width={250} // Adjust width as needed
-              height={250} // Adjust height as needed
+              width={250}
+              height={250}
             />
           </div>
         </div>
@@ -120,15 +91,18 @@ const HeroSection = () => {
         <div style={sectionStyle}>
           <div style={imageSectionStyle}>
             <Image
-              src="/images/img2.jpg" // Update with actual path to the new image
+              src="/images/img2.png"
               alt="Training Image"
-              width={250} // Adjust width as needed
-              height={250} // Adjust height as needed
+              width={400}
+              height={400}
             />
           </div>
           <div style={textSectionStyle}>
             <h2 style={subheadingStyle}>Training</h2>
-            <h3>Student from Beginning to Advance Level</h3>
+            <h3 style={{ margin: 0 }}>
+              <span style={spanStyle}>Student from Beginning to Advance</span>
+              <span style={spanStyle}>Level</span>
+            </h3>
           </div>
         </div>
 
@@ -136,14 +110,17 @@ const HeroSection = () => {
         <div style={sectionStyle}>
           <div style={textSectionStyle}>
             <h2 style={subheadingStyle}>Interning</h2>
-            <h3>Engaging in Various Live Projects / Real-World Problems</h3>
+            <h3 style={{ margin: 0 }}>
+              <span style={spanStyle}>Engaging in Various Live Projects /</span>
+              <span style={spanStyle}>Real-World Problems</span>
+            </h3>
           </div>
           <div style={imageSectionStyle}>
             <Image
-              src="/images/img3.jpg" // Update with actual path to the intern image
+              src="/images/img3.png"
               alt="Interning Image"
-              width={250} // Adjust width as needed
-              height={250} // Adjust height as needed
+              width={400}
+              height={400}
             />
           </div>
         </div>
@@ -152,15 +129,18 @@ const HeroSection = () => {
         <div style={sectionStyle}>
           <div style={imageSectionStyle}>
             <Image
-              src="/images/img4.jpg" // Update with actual path to the testing image
+              src="/images/img4.png"
               alt="Testing Image"
-              width={250} // Adjust width as needed
-              height={250} // Adjust height as needed
+              width={400}
+              height={400}
             />
           </div>
           <div style={textSectionStyle}>
             <h2 style={subheadingStyle}>Testing</h2>
-            <h3>Appearing for Professional Certifications (Microsoft / Google / IBM)</h3>
+            <h3 style={{ margin: 0 }}>
+              <span style={spanStyle}>Appearing for Professional</span>
+              <span style={spanStyle}>Certifications (Microsoft / Google / IBM)</span>
+            </h3>
           </div>
         </div>
 
@@ -168,45 +148,21 @@ const HeroSection = () => {
         <div style={sectionStyle}>
           <div style={textSectionStyle}>
             <h2 style={subheadingStyle}>Challenging</h2>
-            <h3>Work on Cutting Edge Technologies, Research, Startups & Innovation</h3>
+            <h3 style={{ margin: 0 }}>
+              <span style={spanStyle}>Work on Complex Problem /</span> 
+              <span style={spanStyle}>Research / Startups / Innovation</span>
+            </h3>
           </div>
           <div style={imageSectionStyle}>
             <Image
-              src="/images/img5.jpg" // Update with actual path to the challenging image
+              src="/images/img5.png"
               alt="Challenging Image"
-              width={250} // Adjust width as needed
-              height={250} // Adjust height as needed
+              width={400}
+              height={400}
             />
           </div>
         </div>
       </section>
-
-      {/* Navigation Links
-      <nav style={navLinksContainerStyle}>
-        <a href="#tinkering" style={{ ...navLinkStyle, ...activeLinkStyle }}>Tinkering Hub Communities</a>
-        <a href="#tech-support" style={navLinkStyle}>Tech Support & Internship</a>
-        <a href="#certification" style={navLinkStyle}>Microsoft Certification Courses</a>
-        <a href="#benefits" style={navLinkStyle}>Benefits to Students</a>
-      </nav> */}
-
-      {/* Additional Content */}
-      {/* <div style={additionalContentStyle}>
-        <div style={additionalTextStyle}>
-          <div>
-            <p style={boldTextStyle}>Tinkering Hub</p>
-            <p style={boldTextStyle}>Communities</p>
-          </div>
-          <h3>Connect, collaborate, and innovate with like-minded individuals in our dynamic Tinkering Hub Communities. Share ideas, solve challenges, and advance your skills in a supportive network.</h3>
-        </div> */}
-        {/* <div style={imageWrapperStyle}>
-          <Image
-            src="/images/Community.png" // Update with actual path to the image
-            alt="Tinkering Hub Image"
-            width={400} // Adjust width as needed
-            height={300} // Adjust height as needed
-          />
-        </div> */}
-      {/* </div> */}
     </>
   );
 };

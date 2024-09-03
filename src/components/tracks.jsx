@@ -41,14 +41,14 @@ const cardTextStyle = {
 
 // Sample titles for each card
 const cardTitles = [
-  "Track 1 Title",
-  "Track 2 Title",
-  "Track 3 Title",
-  "Track 4 Title",
-  "Track 5 Title",
-  "Track 6 Title",
-  "Track 7 Title",
-  "Track 8 Title",
+  "Track 1:APP-O-THON",
+  "Track 2:DESIGN-O-THON",
+  "Track 3:DRONE-O-THON",
+  "Track 4:ROB-O-THON",
+  "Track 5:SMART-O-THON",
+  "Track 6:AR/VR-THON",
+  "Track 7:EV-THON",
+  "Track 8:GAME-O-THON",
 ];
 
 const Tracks = () => {
