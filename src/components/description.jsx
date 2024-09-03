@@ -1,5 +1,7 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
+import { CardThree } from './CardThree';
 
 const heroStyle = {
   textAlign: 'center',
@@ -36,15 +38,15 @@ const textSectionStyle = {
   flexDirection: 'column',
   alignItems: 'flex-start',
   marginLeft: '7rem',
-  color: '#333333', // Add margin-left to the text
+  color: '#333333',
 };
 
 const spanStyle = {
   display: 'block',
-  width: '100%', // Ensure consistent width for alignment
-  textAlign: 'left', // Align text to the left
-  marginBottom: '0.5rem', // Adjust spacing between spans
-  fontSize :'1.3rem',
+  width: '100%',
+  textAlign: 'left',
+  marginBottom: '0.5rem',
+  fontSize: '1.3rem',
   color: '#333333',
 };
 
@@ -62,7 +64,7 @@ const subheadingStyle = {
 const HeroSection = () => {
   return (
     <>
-      <section style={heroStyle}>
+      <section style={heroStyle} className="desktop-section">
         <h1 style={headingStyle}>Tinkering Process</h1>
         <p style={paragraphStyle}>
           Your compass to innovation and design excellence. From exploration to execution, this dynamic framework fuels creativity and precision, ensuring your product journey aligns seamlessly with user desires.
@@ -149,7 +151,7 @@ const HeroSection = () => {
           <div style={textSectionStyle}>
             <h2 style={subheadingStyle}>Challenging</h2>
             <h3 style={{ margin: 0 }}>
-              <span style={spanStyle}>Work on Complex Problem /</span> 
+              <span style={spanStyle}>Work on Complex Problem /</span>
               <span style={spanStyle}>Research / Startups / Innovation</span>
             </h3>
           </div>
@@ -163,6 +165,32 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
+
+      {/* Mobile Cards */}
+      <div className="mobile-cards">
+        <CardThree />
+      </div>
+
+      {/* CSS for responsiveness */}
+      <style jsx>{`
+        .desktop-section {
+          display: block; /* Show by default */
+        }
+
+        .mobile-cards {
+          display: none; /* Hidden by default */
+        }
+
+        @media (max-width: 768px) {
+          .desktop-section {
+            display: none; /* Hide on mobile */
+          }
+
+          .mobile-cards {
+            display: block; /* Show on mobile */
+          }
+        }
+      `}</style>
     </>
   );
 };

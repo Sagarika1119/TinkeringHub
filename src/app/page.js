@@ -46,8 +46,8 @@
 // import { HeroOne } from "@/Components/Hero";
 // import { CarouselSize } from "@/Components/Caurasoal";
 // import ActivitiesPage from '../components/ActivitiesPage';
-import { CarouselSpacing } from "@/components/carsule";
-import { CardTwo } from "@/components/card";
+// import { CarouselSpacing } from "@/components/carsule";
+// import { CardTwo } from "@/components/card";
 import HeroSection from "@/components/description";
 import GallerySection from "@/components/gallery";
 import Hackathon from "@/components/hackathon";
@@ -55,13 +55,14 @@ import NavAndContentSection from "@/components/navContent";
 import Tracks from "@/components/tracks";
 import { Faq } from "@/components/faq";
 import OurTeams from "@/components/teams";
+// import CardInsideCard from "@/components/newcard";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-8 justify-between bg-primary_color1"> {/* Dark yellow background */}
       <div className="w-full max-w-screen-lg bg-primary_color2  rounded-lg shadow-lg"> {/* Light yellow inner box */}
-        <CarouselSpacing/>
-        <CardTwo/>
+        {/* <CarouselSpacing/> */}
+        {/* <CardTwo/> */}
         <HeroSection/>
         <NavAndContentSection/>
         <GallerySection/>
@@ -69,6 +70,7 @@ export default function Home() {
         <Tracks/>
         <OurTeams/>
         <Faq/>
+        {/* <CardInsideCard/> */}
       </div>
     </main>
   );
